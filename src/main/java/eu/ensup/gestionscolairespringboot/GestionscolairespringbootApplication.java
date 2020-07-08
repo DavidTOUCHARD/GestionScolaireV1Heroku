@@ -16,6 +16,7 @@ public class GestionscolairespringbootApplication {
         app.setDefaultProperties(Collections.singletonMap("server.servlet.context-path", "/gestion"));
         app.run(args);
         System.out.println("ATTENTION CECI EST UN TEST");
+        
 
 	}
 

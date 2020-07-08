@@ -15,6 +15,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 @Table(name="users")
 public class User {
@@ -26,6 +28,8 @@ public class User {
 
 	private String username;
 	private String password;
+	
+	@Type(type = "org.hibernate.type.NumericBooleanType")
 	private boolean enabled;
 	
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

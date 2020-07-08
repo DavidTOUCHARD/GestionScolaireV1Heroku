@@ -135,7 +135,7 @@
 				<artifactId>heroku-maven-plugin</artifactId>
 				<version>3.0.2</version>
 				<configuration>
-					<appName>gestionscolaire2</appName>
+					<appName>gestionensupv1</appName>
 					<processTypes>
 				     		<web>java $JAVA_OPTS -cp target/classes:target/dependency/* Main</web>
 				  	</processTypes>

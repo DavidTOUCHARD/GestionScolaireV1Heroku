@@ -44,30 +44,32 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-			.antMatchers(
-					"/register",
-					"/registerOK",
-					"/login",
-					"/js/",
-					"/css/",
-					"/images/").permitAll()
-			.antMatchers("/**").permitAll()
-				//.hasAnyAuthority("ROLE_DIRECTEUR","ROLE_ENSEIGNANT") 
-			.anyRequest().authenticated()
-			.and()
-				.formLogin()
-				.permitAll()
-			.and()
-				.logout()
-				.logoutSuccessUrl("/login")
-				.permitAll()
-			.and()
-				.exceptionHandling()
-				.accessDeniedPage("/403")
-			.and()
-				.csrf()
-				.disable()
+		.antMatchers(
+				"/register",
+				"/registerOK",
+				"/login",
+				"/js/**",
+				"/css/**",
+				"/images/").permitAll()
+		.antMatchers("/listeEtudiants*")
+			.hasAuthority("ROLE_DIRECTEUR")
+		.antMatchers("/**")
+			.hasAnyAuthority("ROLE_DIRECTEUR", "ROLE_ENSEIGNANT", "ROLE_ADMIN") 
+		.anyRequest().authenticated()
+		.and()
+			.formLogin()
+			.permitAll()
+		.and()
+			.logout()
+			.logoutSuccessUrl("/login")
+			.permitAll()
+		.and()
+			.exceptionHandling()
+			.accessDeniedPage("/accessDenied.jsp")
+		.and()
+			.csrf()
+			.disable()
 
-			;
+		;
 	}
 }

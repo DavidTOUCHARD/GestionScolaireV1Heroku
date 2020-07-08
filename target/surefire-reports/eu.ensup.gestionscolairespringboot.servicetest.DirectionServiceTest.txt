@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: eu.ensup.gestionscolairespringboot.servicetest.DirectionServiceTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in eu.ensup.gestionscolairespringboot.servicetest.DirectionServiceTest

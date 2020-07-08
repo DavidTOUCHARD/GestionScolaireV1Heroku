@@ -2,8 +2,10 @@ package eu.ensup.gestionscolairespringboot;
 
 import java.util.Collections;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 //@EntityScan("eu.ensup.gestionscolairespringboot.domaine")
 //@ComponentScan(basePackageClasses = "eu.ensup.gestionscolairespringboot.controller")
@@ -17,10 +19,5 @@ public class GestionscolairespringbootApplication {
         app.run(args);        
         
 	}
-//	@Bean
-//	CommandLineRunner start(BillRepository billRepository, ProductItemRepository productItemRepository,
-//			CustomerService customerService, InventoryService inventoryService) 
-//	{
-//		return args -> {
-
+	
 }

@@ -14,10 +14,13 @@ public class GestionscolairespringbootApplication {
 //		SpringApplication.run(GestionscolairespringbootApplication.class, args);
 		SpringApplication app = new SpringApplication(GestionscolairespringbootApplication.class);
         app.setDefaultProperties(Collections.singletonMap("server.servlet.context-path", "/gestion"));
-        app.run(args);
-        System.out.println("ATTENTION CECI EST UN TEST");
+        app.run(args);        
         
-
 	}
+//	@Bean
+//	CommandLineRunner start(BillRepository billRepository, ProductItemRepository productItemRepository,
+//			CustomerService customerService, InventoryService inventoryService) 
+//	{
+//		return args -> {
 
 }
